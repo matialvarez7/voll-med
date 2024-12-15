@@ -21,10 +21,12 @@ public class Paciente {
     private String email;
     private String telefono;
     private String documentoIdentidad;
+    private Boolean activo;
     @Embedded
     private Direccion direccion;
 
     public Paciente (DatosRegistroPaciente datosRegistroPaciente) {
+        this.activo = true;
         this.nombre = datosRegistroPaciente.nombre();
         this.email = datosRegistroPaciente.email();
         this.telefono = datosRegistroPaciente.telefono();
