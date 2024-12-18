@@ -82,6 +82,12 @@
 			<artifactId>java-jwt</artifactId>
 			<version>4.4.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -96,6 +102,16 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>10.15.0</version> <!-- Asegúrate de usar una versión reciente -->
+				<configuration>
+					<url>jdbc:mysql://localhost:3306/vollmed_api</url>
+					<user></user>
+					<password></password>
 				</configuration>
 			</plugin>
 		</plugins>
